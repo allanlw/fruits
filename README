@@ -1,0 +1,26 @@
+Use After Free Challenge
+========================
+
+This is a use after free challenge that is intended to be a high-level 
+bin challenge. It is to be run as a service on a computer that has 64 
+bit ASLR and NX on. It also uses stack cookies, although there shouldn't 
+be any stack buffer overflows, this is mostly to signal that stack 
+overflows shouldn't be tried.
+
+The exploit is that a reference to your "favorite item" is maintained 
+after freeing.
+
+An example of the correct exploitation strategy can be seen in do.py.
+
+A method for allowing them to learn the address of a function in the 
+binary is mandatory because of ASLR. It is achieved through letting the 
+user set what type of item their favorite item is.
+
+This challenge is ready to be released.
+
+Release Notes
+=============
+
+This should be run in a locked down environment on a virtual machine. It 
+is possible to get a shell with this binary!!!!!! Furthermore, it is 
+important that the competitors know that the file is located in key.txt
